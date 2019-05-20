@@ -10,6 +10,7 @@ from coach import Coach
 from team import Team
 
 
+
 __all__ = ['getSoupFromURL', 'getCurrentPlayerNamesAndURLS',
            'buildPlayerDictionary', 'searchForName',
            'savePlayerDictionary', 'loadPlayerDictionary',
@@ -156,6 +157,40 @@ def dfFromGameLogURLList(gamelogs, dataframes=None):
         return None
 
 
+
+def getovHelper(table_soup):
+    table = table_soup.find('table')
+    averages = table.find_all("tbody")
+    rows = averages[0].findAll('tr')
+    years = []
+    for row in rows:
+        year_html = row.find('a')
+        year = year_html.getText()
+        years.append(year)
+    rows = [r for r in rows if len(r.findAll('td')) > 0]
+    parsed_rows = [[col.getText() for col in row.findAll('td')] for row in rows]
+    parsed_table = [row for row in parsed_rows if row[0] != ""]
+    for index in range(len(parsed_table)):
+        curr_year = years[index]
+        (parsed_table[index]).insert(0, curr_year)
+    return parsed_table
+
+
+def getoverView(url):
+    glsoup = getSoupFromURL(url)
+    divs = glsoup.find_all("div", {"class": "overthrow table_container"})
+    div_part1 = divs[:17]
+    div_part2 = [divs[19]]
+    divs = div_part1 + div_part2
+    for div in divs:
+        curr_table = getovHelper(div)
+        print(curr_table)
+
+
+
+
+
+
 def dfFromGameLogURL(url):
     """
     Takes a url of a player's game log for a given year, returns a DataFrame
@@ -274,11 +309,13 @@ def getAllPlayerNamesAndURLS(suppressOutput=True):
     return dict(names)
 
 
-def getAllPlayers(suppressOutput=True, min_year_active=2004):
+def getAllPlayers(suppressOutput=True, min_year_active=2019):
 
     players = dict()
-
+    i = 0
     for letter in string.ascii_lowercase:
+        if i >= 1:
+            break
         letter_page = getSoupFromURL('https://www.basketball-reference.com/players/{}/'.format(letter), suppressOutput)
         if letter_page is None:
             continue
@@ -296,6 +333,7 @@ def getAllPlayers(suppressOutput=True, min_year_active=2004):
                     players[name] = Player(name, 'https://www.basketball-reference.com' + player.attrs['href'])
             except Exception as e:
                 print("ERROR:", e)
+        i += 1
         sleep(1) # sleeping to be kind for requests
 
     return players

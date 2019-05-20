@@ -1,12 +1,19 @@
 import requests
 from time import sleep
 from bs4 import BeautifulSoup, Comment
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+
 
 
 def getSoupFromURL(url, suppressOutput=True, max_retry=3):
     """
     This function grabs the url and returns and returns the BeautifulSoup object
     """
+    options = FirefoxOptions()
+    options.add_argument("--headless")
+    browser = webdriver.Firefox(options=options)
+    browser.get(url)
     if not suppressOutput:
         print(url)
 
@@ -16,7 +23,7 @@ def getSoupFromURL(url, suppressOutput=True, max_retry=3):
             num_attempts += 1
             r = requests.get(url)
             r.raise_for_status()
-            return BeautifulSoup(r.text, "html5lib")
+            return BeautifulSoup(browser.page_source, "html.parser")
         except requests.exceptions.HTTPError as http:
             print("ERROR - HTTP:", http)
             if http.errno == 500:

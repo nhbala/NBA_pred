@@ -1,0 +1,19 @@
+[INFO  - 2019-05-20T07:53:46.590Z] GhostDriver - Main - running on port 57577
+[INFO  - 2019-05-20T07:53:46.770Z] Session [6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-05-20T07:53:46.770Z] Session [6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b] - page.customHeaders:  - {}
+[INFO  - 2019-05-20T07:53:46.770Z] Session [6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-05-20T07:53:46.771Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b
+[ERROR - 2019-05-20T07:53:51.530Z] Session [6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b] - page.onError - msg: Exception in queued GPT command TypeError: Attempted to assign to readonly property.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-05-20T07:53:51.530Z] Session [6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b] - page.onError - stack:
+  push (https://securepubads.g.doubleclick.net/gpt/pubads_impl_2019051301.js:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-05-20T07:53:52.135Z] Session [6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b] - page.onError - msg: Exception in queued GPT command ReferenceError: Can't find variable: Symbol
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-05-20T07:53:52.135Z] Session [6598a9f0-7ad4-11e9-bd9f-4b1b9e95309b] - page.onError - stack:
+  push (https://securepubads.g.doubleclick.net/gpt/pubads_impl_2019051301.js:1)
+
+  phantomjs://platform/console++.js:263 in error

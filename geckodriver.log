@@ -1,0 +1,536 @@
+1558337342919	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.hrwYGCjCITCO"
+1558337344214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558337344214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558337344214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558337346237	Marionette	INFO	Listening on port 54916
+1558337346303	Marionette	WARN	TLS certificate errors will be ignored for this session
+1558337398152	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.JSCD8Hv16Olb"
+1558337399369	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558337399369	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558337399369	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558337400834	Marionette	INFO	Listening on port 56040
+1558337400896	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://s.update.ap.lijit.com/2/4.44.1/main.js, line 1: TypeError: t is null
+1558337654695	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.BHG4IpUacC7r"
+1558337655437	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558337655438	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558337655438	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558337657461	Marionette	INFO	Listening on port 59223
+1558337657554	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+[Child 3324, MediaPlayback #2] WARNING: Decoder=157dd4000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SeekPromise> mozilla::MediaSourceTrackDemuxer::DoSeek(const mozilla::media::TimeUnit &): manager is detached.: file /builds/worker/workspace/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3331
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+1558337847848	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.0PVoX0oIjonc"
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+1558337849137	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558337849138	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558337849138	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+1558337852350	Marionette	INFO	Listening on port 62120
+1558337852415	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+JavaScript error: https://c2.rfihub.net/static/js/vw_min-0.4.js, line 1: TypeError: e.contains is not a function
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://serving.roimediaconsultants.com/servlet/view/banner/javascript/zone?zid=1920&pid=0&fr=31&frcn=3&frlm=300&friendly=friendly_99303853&random=79735711&referrer=http%3A%2F%2Fbasketball-reference.com%2F, line 51: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://serving.roimediaconsultants.com/servlet/view/banner/javascript/zone?pid=0&zid=1920&random=26456037&millis=20190520033851&hb_request=23416462&hb_error=decline&friendly=friendly_60288257&resolution=unspecified&refresh_count=18&referrer=http%3A%2F%2Fbasketball-reference.com%2F, line 51: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://s.update.rubiconproject.com/2/4.44.1/main.js, line 1: TypeError: t is null
+JavaScript warning: https://dco-assets.everestads.net/ics-campaign//5044/t/6233/39/edge_includes/jquery-2.0.3.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+1558338072533	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.iu1rxCHpcwYn"
+1558338073747	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558338073747	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558338073748	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558338077247	Marionette	INFO	Listening on port 65176
+1558338077325	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+[Child 3324, MediaPlayback #2] WARNING: Decoder=13c603000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SeekPromise> mozilla::MediaSourceTrackDemuxer::DoSeek(const mozilla::media::TimeUnit &): manager is detached.: file /builds/worker/workspace/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3331
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://serving.roimediaconsultants.com/servlet/view/banner/javascript/zone?zid=1920&pid=0&fr=31&frcn=8&frlm=300&friendly=friendly_89412387&random=81292676&referrer=http%3A%2F%2Fbasketball-reference.com%2F, line 51: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/nsSidebar.js, line 15: TypeError: window.docShell is null
+JavaScript error: jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/nsSidebar.js, line 15: TypeError: window.docShell is null
+JavaScript error: , line 0: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://s.update.ap.lijit.com/2/4.44.1/main.js, line 1: TypeError: t is null
+JavaScript error: https://serving.roimediaconsultants.com/servlet/view/banner/javascript/zone?zid=1920&pid=0&fr=31&frcn=9&frlm=300&friendly=friendly_81292676&random=66059382&referrer=http%3A%2F%2Fbasketball-reference.com%2F, line 51: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://cdn.flashtalking.com/pageFold/ftpagefold_v4.7.2.js, line 1: TypeError: b.parent is null
+JavaScript error: https://cdn.flashtalking.com/pageFold/ftpagefold_v4.7.2.js, line 1: TypeError: b.parent is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: resource://gre/modules/FinderIterator.jsm, line 534: TypeError: can't access dead object
+JavaScript error: https://s.update.ap.lijit.com/2/4.44.1/main.js, line 1: TypeError: t is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+1558338198260	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.sfInXornXu8Y"
+1558338199622	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558338199623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558338199623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558338201950	Marionette	INFO	Listening on port 51258
+1558338202088	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 3433, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://fw.adsafeprotected.com/rjss/www.googletagservices.com/164705/25094250/dcm/dcmads.js?adsafe_preview=&adsafe_pb=https%3A%2F%2Fadserver.adtechus.com%2Faddyn%2F3.0%2F5399.1%2F2791060%2F0%2F225%2FADTECH%3Bloc%3D100%3Btarget%3D_blank%3Bsub1%3DRkJQaTEzWho2NlQeM01TG1gDC38=%3Bsub2%3Dp-pBekKpzLPLnbf%3B&gdpr=0&gdpr_consent=, line 910: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://fw.adsafeprotected.com/rjss/www.googletagservices.com/164705/25094250/dcm/dcmads.js?adsafe_preview=&adsafe_pb=https%3A%2F%2Fadserver.adtechus.com%2Faddyn%2F3.0%2F5399.1%2F2791060%2F0%2F225%2FADTECH%3Bloc%3D100%3Btarget%3D_blank%3Bsub1%3DRkJQaTEzWho2NlQeM01TG1gDC38=%3Bsub2%3Dp-pBekKpzLPLnbf%3B&gdpr=0&gdpr_consent=, line 910: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+1558338242512	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.NLR5bLFLaFyg"
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+1558338243390	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558338243390	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558338243390	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+1558338246108	Marionette	INFO	Listening on port 52190
+1558338246180	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3398, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+1558338251351	Marionette	INFO	Stopped listening on port 65176
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2A000A,name=PClientManager::Msg___delete__) Channel error: cannot send/recv
+
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1558338255875	Marionette	INFO	Stopped listening on port 62120
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+[Parent 3449, Gecko_IOThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+[Parent 3449, Gecko_IOThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript warning: https://dco-assets.everestads.net/ics-campaign//5044/t/6233/39/edge_includes/jquery-2.0.3.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+[Child 3307, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x52000E,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3500BB,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1558338324317	Marionette	INFO	Stopped listening on port 54916
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1558338326851	Marionette	INFO	Stopped listening on port 56040
+1558338329325	Marionette	INFO	Stopped listening on port 59223
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+[Child 3451, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+1558338331626	Marionette	INFO	Stopped listening on port 52190
+1558338431787	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.muy7Xg0bfdLA"
+1558338432399	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558338432399	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558338432399	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558338433625	Marionette	INFO	Listening on port 54643
+1558338433642	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: , line 0: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:190:13
+
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 545: TypeError: this.currentAd is undefined
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+1558339269233	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/6k/hq8p7ghj3k1bzd9nrvwhpy380000gn/T/rust_mozprofile.e1bNS4xQam4q"
+*** You are running in headless mode.
+1558339269775	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1558339269776	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1558339269776	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1558339270959	Marionette	INFO	Listening on port 61300
+1558339270996	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript warning: https://dco-assets.everestads.net/ics-campaign//5044/t/6230/25/edge_includes/jquery-2.0.3.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://d29xw9s9x32j3w.cloudfront.net/players/library/videojs-ima/0.6.2/s2n-videojs.ima.js, line 556: TypeError: this.adsManager is null
+1558339294742	Marionette	INFO	Stopped listening on port 54643
