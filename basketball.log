@@ -39202,3 +39202,133 @@ DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /play
 DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:61288/session/5ecdb6b5-3436-e14a-8650-7d6e2f021bc8/source {}
 DEBUG:urllib3.connectionpool:http://127.0.0.1:61288 "GET /session/5ecdb6b5-3436-e14a-8650-7d6e2f021bc8/source HTTP/1.1" 200 1754488
 DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:62898/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:62898
+DEBUG:urllib3.connectionpool:http://127.0.0.1:62898 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:62898/session/8dac434a-5029-9044-8f31-ce9b7d7fd05e/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:62898 "POST /session/8dac434a-5029-9044-8f31-ce9b7d7fd05e/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:62898/session/8dac434a-5029-9044-8f31-ce9b7d7fd05e/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:62898 "GET /session/8dac434a-5029-9044-8f31-ce9b7d7fd05e/source HTTP/1.1" 200 1721700
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:63962/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:63962
+DEBUG:urllib3.connectionpool:http://127.0.0.1:63962 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:63962/session/500fdfb4-6b08-8f4b-87c5-095fca4858e6/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:63962 "POST /session/500fdfb4-6b08-8f4b-87c5-095fca4858e6/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:63962/session/500fdfb4-6b08-8f4b-87c5-095fca4858e6/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:63962 "GET /session/500fdfb4-6b08-8f4b-87c5-095fca4858e6/source HTTP/1.1" 200 1719833
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:65265/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:65265
+DEBUG:urllib3.connectionpool:http://127.0.0.1:65265 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:65265/session/fe4cdea2-03f3-c940-b6ed-9903203ccf38/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:65265 "POST /session/fe4cdea2-03f3-c940-b6ed-9903203ccf38/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:65265/session/fe4cdea2-03f3-c940-b6ed-9903203ccf38/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:65265 "GET /session/fe4cdea2-03f3-c940-b6ed-9903203ccf38/source HTTP/1.1" 200 1719858
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:51196/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:51196
+DEBUG:urllib3.connectionpool:http://127.0.0.1:51196 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:51196/session/2850a90b-9ccf-0647-b664-b545f11c678b/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:51196 "POST /session/2850a90b-9ccf-0647-b664-b545f11c678b/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:51196/session/2850a90b-9ccf-0647-b664-b545f11c678b/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:51196 "GET /session/2850a90b-9ccf-0647-b664-b545f11c678b/source HTTP/1.1" 200 1754987
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:54728/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:54728
+DEBUG:urllib3.connectionpool:http://127.0.0.1:54728 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:54728/session/040fcc17-587d-a74d-bb3c-d49d5e3f7091/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:54728 "POST /session/040fcc17-587d-a74d-bb3c-d49d5e3f7091/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:54728/session/040fcc17-587d-a74d-bb3c-d49d5e3f7091/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:54728 "GET /session/040fcc17-587d-a74d-bb3c-d49d5e3f7091/source HTTP/1.1" 200 1752975
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:61483/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:61483
+DEBUG:urllib3.connectionpool:http://127.0.0.1:61483 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:61483/session/c2db84da-df79-5f4e-a1b3-1e290bc19d2b/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:61483 "POST /session/c2db84da-df79-5f4e-a1b3-1e290bc19d2b/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:61483/session/c2db84da-df79-5f4e-a1b3-1e290bc19d2b/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:61483 "GET /session/c2db84da-df79-5f4e-a1b3-1e290bc19d2b/source HTTP/1.1" 200 1720324
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:49350/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:49350
+DEBUG:urllib3.connectionpool:http://127.0.0.1:49350 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:49350/session/38855677-8c53-314e-8202-ca6617ddec7f/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:50622/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:50622
+DEBUG:urllib3.connectionpool:http://127.0.0.1:50622 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:50622/session/dfdb54d6-6265-5d43-bc75-2e3ba22aed38/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:50622 "POST /session/dfdb54d6-6265-5d43-bc75-2e3ba22aed38/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:50622/session/dfdb54d6-6265-5d43-bc75-2e3ba22aed38/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:50622 "GET /session/dfdb54d6-6265-5d43-bc75-2e3ba22aed38/source HTTP/1.1" 200 1720342
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:53593/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:53593
+DEBUG:urllib3.connectionpool:http://127.0.0.1:53593 "POST /session HTTP/1.1" 200 711
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:53593/session/76dabf9e-7710-e749-9704-38c2565389a3/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:49373/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:49373
+DEBUG:urllib3.connectionpool:http://127.0.0.1:49373 "POST /session HTTP/1.1" 200 710
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:49373/session/2b52bc66-39b7-844a-97c0-ce18e7c5a799/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:49373 "POST /session/2b52bc66-39b7-844a-97c0-ce18e7c5a799/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:49373/session/2b52bc66-39b7-844a-97c0-ce18e7c5a799/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:49373 "GET /session/2b52bc66-39b7-844a-97c0-ce18e7c5a799/source HTTP/1.1" 200 1753512
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:50657/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:50657
+DEBUG:urllib3.connectionpool:http://127.0.0.1:50657 "POST /session HTTP/1.1" 200 710
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:50657/session/c424f59b-2ce8-a146-bcbf-35884073ef22/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:50657 "POST /session/c424f59b-2ce8-a146-bcbf-35884073ef22/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:50657/session/c424f59b-2ce8-a146-bcbf-35884073ef22/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:50657 "GET /session/c424f59b-2ce8-a146-bcbf-35884073ef22/source HTTP/1.1" 200 1755069
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:52407/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "marionette": true, "moz:firefoxOptions": {"args": ["--headless"]}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:52407
+DEBUG:urllib3.connectionpool:http://127.0.0.1:52407 "POST /session HTTP/1.1" 200 710
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:52407/session/c72e271d-7f1d-c94e-9358-d24d550230aa/url {"url": "https://www.basketball-reference.com/players/b/bryanko01.html"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:52407 "POST /session/c72e271d-7f1d-c94e-9358-d24d550230aa/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.basketball-reference.com:443
+DEBUG:urllib3.connectionpool:https://www.basketball-reference.com:443 "GET /players/b/bryanko01.html HTTP/1.1" 200 None
+DEBUG:selenium.webdriver.remote.remote_connection:GET http://127.0.0.1:52407/session/c72e271d-7f1d-c94e-9358-d24d550230aa/source {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:52407 "GET /session/c72e271d-7f1d-c94e-9358-d24d550230aa/source HTTP/1.1" 200 1719910
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request

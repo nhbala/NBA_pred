@@ -176,15 +176,30 @@ def getovHelper(table_soup):
     return parsed_table
 
 
+
 def getoverView(url):
     glsoup = getSoupFromURL(url)
     divs = glsoup.find_all("div", {"class": "overthrow table_container"})
-    div_part1 = divs[:17]
-    div_part2 = [divs[19]]
-    divs = div_part1 + div_part2
+    div_index = len(divs) -1
+    divs = divs[:div_index - 2] + [divs[div_index]]
+    final_lst = []
     for div in divs:
+        print("hi")
+        table_header_lst = div.find("thead")
+        th_lst = table_header_lst.find_all("tr")
+        final_th_header = th_lst[-1]
+        header_lst = []
+        th_stuff = final_th_header.find_all("th")
+        for th_thing in th_stuff:
+            curr_val = th_thing.get_text()
+            header_lst.append(curr_val)
         curr_table = getovHelper(div)
-        print(curr_table)
+        curr_table.insert(0, header_lst)
+        final_lst.append(curr_table)
+    return final_lst
+
+
+
 
 
 
