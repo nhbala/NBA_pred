@@ -179,24 +179,27 @@ def getovHelper(table_soup):
 
 def getoverView(url):
     glsoup = getSoupFromURL(url)
-    divs = glsoup.find_all("div", {"class": "overthrow table_container"})
-    div_index = len(divs) -1
-    divs = divs[:div_index - 2] + [divs[div_index]]
-    final_lst = []
-    for div in divs:
-        print("hi")
-        table_header_lst = div.find("thead")
-        th_lst = table_header_lst.find_all("tr")
-        final_th_header = th_lst[-1]
-        header_lst = []
-        th_stuff = final_th_header.find_all("th")
-        for th_thing in th_stuff:
-            curr_val = th_thing.get_text()
-            header_lst.append(curr_val)
-        curr_table = getovHelper(div)
-        curr_table.insert(0, header_lst)
-        final_lst.append(curr_table)
-    return final_lst
+
+    id_lst = ["all_per_game", "all_totals", "all_per_minute", "all_per_poss", "all_advanced", "all_shooting", "all_pbp", "all_playoffs_per_game", "all_playoffs_totals", "all_playoffs_per_minute", "all_playoffs_per_poss", "all_playoffs_advanced", "all_playoffs_shooting", "all_playoffs_pbp", "all_all_salaries"]
+    final_dict = {}
+    for curr_id in id_lst:
+        curr_div = glsoup.find("div", {"id": curr_id})
+        if curr_div != None:
+            div = curr_div.find("div", {"class": "overthrow table_container"})
+            table_header_lst = div.find("thead")
+            th_lst = table_header_lst.find_all("tr")
+            final_th_header = th_lst[-1]
+            header_lst = []
+            th_stuff = final_th_header.find_all("th")
+            for th_thing in th_stuff:
+                curr_val = th_thing.get_text()
+                header_lst.append(curr_val)
+            curr_table = getovHelper(div)
+            curr_table.insert(0, header_lst)
+            final_dict[curr_id] = curr_table
+    sleep(1) 
+
+    return final_dict
 
 
 

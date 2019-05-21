@@ -23,7 +23,9 @@ def getSoupFromURL(url, suppressOutput=True, max_retry=3):
             num_attempts += 1
             r = requests.get(url)
             r.raise_for_status()
-            return BeautifulSoup(browser.page_source, "html.parser")
+            final = BeautifulSoup(browser.page_source, "html.parser")
+            browser.close()
+            return final
         except requests.exceptions.HTTPError as http:
             print("ERROR - HTTP:", http)
             if http.errno == 500:
