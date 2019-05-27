@@ -3,10 +3,12 @@ from time import sleep
 from bs4 import BeautifulSoup, Comment
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from concurrent.futures import ProcessPoolExecutor
+import concurrent.futures
 
 
 
-def getSoupFromURL(url, suppressOutput=True, max_retry=3):
+def getSoupFromURL(url, suppressOutput=True, max_retry=10):
     """
     This function grabs the url and returns and returns the BeautifulSoup object
     """
@@ -24,12 +26,13 @@ def getSoupFromURL(url, suppressOutput=True, max_retry=3):
             r = requests.get(url)
             r.raise_for_status()
             final = BeautifulSoup(browser.page_source, "html.parser")
-            browser.close()
+            browser.quit()
+            sleep(50)
             return final
         except requests.exceptions.HTTPError as http:
             print("ERROR - HTTP:", http)
             if http.errno == 500:
-                sleep(5)
+                sleep(100)
         except requests.exceptions.ConnectionError as connection:
             print("ERROR - Connection:", connection)
             return None

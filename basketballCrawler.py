@@ -8,6 +8,8 @@ from soup_utils import find_html_in_comment
 from player import Player, getSoupFromURL
 from coach import Coach
 from team import Team
+from concurrent.futures import ProcessPoolExecutor
+import concurrent.futures
 
 
 
@@ -165,8 +167,11 @@ def getovHelper(table_soup):
     years = []
     for row in rows:
         year_html = row.find('a')
-        year = year_html.getText()
-        years.append(year)
+        if year_html == None:
+            years.append(0)
+        else:
+            year = year_html.getText()
+            years.append(year)
     rows = [r for r in rows if len(r.findAll('td')) > 0]
     parsed_rows = [[col.getText() for col in row.findAll('td')] for row in rows]
     parsed_table = [row for row in parsed_rows if row[0] != ""]
@@ -177,8 +182,10 @@ def getovHelper(table_soup):
 
 
 
-def getoverView(url):
-    glsoup = getSoupFromURL(url)
+def getoverView(url_tup):
+    print("in get overViews")
+
+    glsoup = getSoupFromURL(url_tup[1])
 
     id_lst = ["all_per_game", "all_totals", "all_per_minute", "all_per_poss", "all_advanced", "all_shooting", "all_pbp", "all_playoffs_per_game", "all_playoffs_totals", "all_playoffs_per_minute", "all_playoffs_per_poss", "all_playoffs_advanced", "all_playoffs_shooting", "all_playoffs_pbp", "all_all_salaries"]
     final_dict = {}
@@ -195,11 +202,12 @@ def getoverView(url):
                 curr_val = th_thing.get_text()
                 header_lst.append(curr_val)
             curr_table = getovHelper(div)
-            curr_table.insert(0, header_lst)
-            final_dict[curr_id] = curr_table
-    sleep(1) 
+            final_table = curr_table
+            final_table.insert(0, header_lst)
+            final_dict[curr_id] = final_table
+    sleep(2)
 
-    return final_dict
+    return (url_tip[0], final_dict)
 
 
 
@@ -327,7 +335,7 @@ def getAllPlayerNamesAndURLS(suppressOutput=True):
     return dict(names)
 
 
-def getAllPlayers(suppressOutput=True, min_year_active=2019):
+def getAllPlayers(suppressOutput=True, min_year_active=1980):
 
     players = dict()
     i = 0
