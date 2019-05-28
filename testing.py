@@ -5,7 +5,12 @@ import pandas as pd
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from player import Player, getSoupFromURL
 from time import sleep
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
 
+
+PER_GAME_REG_OPTIMAL_K = 6
 
 def create_final_dict():
     final_dict = {}
@@ -190,3 +195,71 @@ def find_per_game_avg():
         per_game_dict[person] = [per_game_data[0]] + [career_per_game]
     with open('reg_season_per_game.json', 'w') as fp:
         json.dump(per_game_dict, fp)
+
+def find_optimal_k():
+    json_object = json.load(open("reg_season_per_game.json"))
+    json_object_height = json.load(open("data.json"))
+    data = []
+    for person in json_object:
+        values = json_object[person]
+        values_to_add = (values[1])[5:]
+        first = (json_object_height[person])
+        json_acceptable_string = first.replace("'", "\"")
+        d = json.loads(json_acceptable_string)
+        curr_height = d['height']
+        height_array = curr_height.split('-')
+        final_height_inch = (int(height_array[0]) * 12) + int(height_array[1])
+        values_to_add.append(final_height_inch)
+        data.append(values_to_add)
+
+    mms = MinMaxScaler()
+    mms.fit(data)
+    data_transformed = mms.transform(data)
+
+    Sum_of_squared_distances = []
+    K = range(1,15)
+    for k in K:
+        km = KMeans(n_clusters=k)
+        km = km.fit(data_transformed)
+        Sum_of_squared_distances.append(km.inertia_)
+
+    plt.plot(K, Sum_of_squared_distances, 'bx-')
+    plt.xlabel('k')
+    plt.ylabel('Sum_of_squared_distances')
+    plt.title('Elbow Method For Optimal k')
+    plt.show()
+
+def clustering_reg_season_avg():
+    json_object = json.load(open("reg_season_per_game.json"))
+    json_object_height = json.load(open("data.json"))
+    data = []
+    reverse_dict = {}
+    for person in json_object:
+        values = json_object[person]
+        values_to_add = (values[1])[5:]
+        gp = values_to_add[0]
+        gs = values_to_add[1]
+        start_rate = gs/gp
+        values_to_add[0] = 1 - start_rate
+        values_to_add[1] = start_rate
+        first = (json_object_height[person])
+        json_acceptable_string = first.replace("'", "\"")
+        d = json.loads(json_acceptable_string)
+        curr_height = d['height']
+        height_array = curr_height.split('-')
+        final_height_inch = (int(height_array[0]) * 12) + int(height_array[1])
+        values_to_add.append(final_height_inch)
+        data.append(values_to_add)
+        reverse_dict[repr(values_to_add)] = person
+    km = KMeans(n_clusters=6, init='k-means++',
+                max_iter=1000, n_init=10, verbose=0, random_state=3425)
+    km = km.fit(data)
+    final_dict = {}
+    for index in range(len(km.labels_)):
+        curr_category = km.labels_[index]
+        print(curr_category)
+        curr_row = data[index]
+        curr_person = reverse_dict[repr(curr_row)]
+        final_dict[person] = (curr_row).append(curr_category)
+    with open('with_cat_reg_season_avg.json', 'w') as fp:
+        json.dump(final_dict, fp)
