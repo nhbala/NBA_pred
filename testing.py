@@ -6,8 +6,6 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from player import Player, getSoupFromURL
 from time import sleep
 
-DONT_ADD_THIS = "xa0"
-
 
 def create_final_dict():
     final_dict = {}
@@ -17,12 +15,6 @@ def create_final_dict():
 
     with open('finaldict.json', 'w') as fp:
              json.dump(final_dict, fp)
-
-
-
-
-
-
 
 def getovHelper(table_soup):
     try:
@@ -46,8 +38,6 @@ def getovHelper(table_soup):
         return parsed_table
     except:
         return []
-
-
 
 def getoverView(url_tup):
     print(url_tup[0])
@@ -128,3 +118,75 @@ def create_modified_dict():
         final_dict[curr_name] = modified_dict
     with open('modified_dict.json', 'w') as fp:
         json.dump(final_dict, fp)
+
+def final_dict_cleaning():
+    json_object = json.load(open("modified_dict.json"))
+    final_dict = {}
+    for person in json_object:
+        person_values = json_object[person]
+        modified_dict = {}
+        for topic in person_values:
+            curr_values = person_values[topic]
+            correct_len = len(curr_values[0])
+            index_to_delete = []
+            for index in range(len(curr_values)):
+                if len(curr_values[index]) != correct_len:
+                    index_to_delete.append(index)
+            index_to_delete.sort(reverse = True)
+            for delete_index in index_to_delete:
+                del curr_values[delete_index]
+            modified_dict[topic] = curr_values
+        final_dict[person] = modified_dict
+    with open('allcleaned_data.json', 'w') as fp:
+        json.dump(final_dict, fp)
+
+def get80sdata():
+    json_object = json.load(open("allcleaned_data.json"))
+    names_lst = []
+    for person in json_object:
+        person_stuff = json_object[person]
+        for topic in person_stuff:
+            curr_values = person_stuff[topic]
+            if len(curr_values) >= 2:
+                if curr_values[1][0] != 0:
+                    curr_year = curr_values[1][0]
+                    if "-" in curr_year:
+                        year_array = curr_year.split("-")
+                        if int(year_array[0]) >= 1979:
+                             names_lst.append(person)
+                             break
+    final_dict = {}
+    for name in names_lst:
+        final_dict[name] = json_object[name]
+    with open('post80salldata.json', 'w') as fp:
+        json.dump(final_dict, fp)
+
+def find_per_game_avg():
+    json_object = json.load(open("post80salldata.json"))
+    per_game_dict = {}
+    for person in json_object:
+        person_stuff = json_object[person]
+        per_game_data = person_stuff["all_per_game"]
+        values = per_game_data[1:]
+        data_change_lst = [7,8,9,11,12,14,15,18,19,21,22,23,24,25,26,27,28,29]
+        for year_data in values:
+            games = year_data[5]
+            for column in data_change_lst:
+                if year_data[column] != "N/A":
+                    year_data[column] = float(year_data[column]) * float(games)
+        career_per_game = [0] * len(per_game_data[1])
+        go_through_stats = per_game_data[1:]
+        divisors = [0] * len(per_game_data[1])
+        for index in range(len(go_through_stats)):
+            for index1 in range(len(go_through_stats[0])):
+                if index1 > 4:
+                    if (go_through_stats[index][index1]) != "N/A":
+                        career_per_game[index1] += float(go_through_stats[index][index1])
+                        divisors[index1] += float(go_through_stats[index][5])
+        for index in range(len(career_per_game)):
+            if index > 6:
+                if divisors[index] != 0:
+                    career_per_game[index] = career_per_game[index]/divisors[index]
+        per_game_dict[person] = [per_game_data[0]] + [career_per_game]
+    with open('reg_season_per_game.json', 'w') as fp:
+        json.dump(per_game_dict, fp)
