@@ -6,16 +6,17 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from player import Player, getSoupFromURL
 from time import sleep
 
-# players_url_list = bc.getAllPlayers()
-# bc.savePlayerDictionary(players_url_list, 'data.json')
+DONT_ADD_THIS = "xa0"
 
-final_dict = {}
-json_object = json.load(open("result.json"))
-for curr_object in json_object:
-    final_dict[curr_object[0]] = curr_object[1]
 
-with open('finaldict.json', 'w') as fp:
-         json.dump(final_dict, fp)
+def create_final_dict():
+    final_dict = {}
+    json_object = json.load(open("result.json"))
+    for curr_object in json_object:
+        final_dict[curr_object[0]] = curr_object[1]
+
+    with open('finaldict.json', 'w') as fp:
+             json.dump(final_dict, fp)
 
 
 
@@ -100,3 +101,30 @@ def run_script():
             result_lst.append(results.result())
         with open('result.json', 'w') as fp:
             json.dump(result_lst, fp)
+
+def create_modified_dict():
+    json_object = json.load(open("finaldict.json"))
+    final_dict = {}
+    for curr_name in json_object:
+        curr_person_values = json_object[curr_name]
+        modified_dict = {}
+        for topic in curr_person_values:
+            curr_values = curr_person_values[topic]
+            curr_value_header = curr_values[0]
+            curr_actual_values = curr_values[1:]
+            for category_index in range(len(curr_value_header)):
+                header_val = (curr_value_header[category_index]).replace('\xa0', '')
+                for row_index in range(len(curr_actual_values)):
+                    if len(curr_value_header) == len(curr_actual_values[row_index]):
+                        curr_row_value = curr_actual_values[row_index][category_index]
+                        if header_val == '' and curr_row_value == '':
+                            curr_actual_values[row_index][category_index] = "remove"
+                            curr_value_header[category_index] = "remove"
+                        if header_val != '' and curr_row_value == '':
+                            curr_actual_values[row_index][category_index] = "N/A"
+            modified_matrix = [curr_value_header] + curr_actual_values
+            modified_matrix = [[element for element in row if element != 'remove'] for row in modified_matrix]
+            modified_dict[topic] = modified_matrix
+        final_dict[curr_name] = modified_dict
+    with open('modified_dict.json', 'w') as fp:
+        json.dump(final_dict, fp)
