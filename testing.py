@@ -167,7 +167,7 @@ def get80sdata():
         json.dump(final_dict, fp)
 
 def find_per_game_avg():
-    json_object = json.load(open("post80salldata.json"))
+    json_object = json.load(open("datasets/post80salldata.json"))
     per_game_dict = {}
     for person in json_object:
         person_stuff = json_object[person]
@@ -192,8 +192,16 @@ def find_per_game_avg():
             if index > 6:
                 if divisors[index] != 0:
                     career_per_game[index] = career_per_game[index]/divisors[index]
+        if career_per_game[9] != 0:
+            career_per_game[10] = (career_per_game[8])/(career_per_game[9])
+        if career_per_game[12] != 0:
+            career_per_game[13] = (career_per_game[11])/(career_per_game[12])
+        if career_per_game[15] != 0:
+            career_per_game[16] = (career_per_game[14])/(career_per_game[15])
+        if career_per_game[9] != 0:
+            career_per_game[21] = (career_per_game[8] + 0.5 * career_per_game[11])/career_per_game[9]
         per_game_dict[person] = [per_game_data[0]] + [career_per_game]
-    with open('reg_season_per_game.json', 'w') as fp:
+    with open('datasets/reg_season_per_game.json', 'w') as fp:
         json.dump(per_game_dict, fp)
 
 def find_optimal_k():
@@ -230,8 +238,8 @@ def find_optimal_k():
     plt.show()
 
 def clustering_reg_season_avg():
-    json_object = json.load(open("reg_season_per_game.json"))
-    json_object_height = json.load(open("data.json"))
+    json_object = json.load(open("datasets/reg_season_per_game.json"))
+    json_object_height = json.load(open("datasets/data.json"))
     data = []
     reverse_dict = {}
     for person in json_object:
@@ -251,15 +259,63 @@ def clustering_reg_season_avg():
         values_to_add.append(final_height_inch)
         data.append(values_to_add)
         reverse_dict[repr(values_to_add)] = person
-    km = KMeans(n_clusters=6, init='k-means++',
-                max_iter=1000, n_init=10, verbose=0, random_state=3425)
+    km = KMeans(n_clusters=10, init='k-means++',
+                max_iter=100, n_init=10, verbose=0, random_state=34)
     km = km.fit(data)
     final_dict = {}
     for index in range(len(km.labels_)):
         curr_category = km.labels_[index]
-        print(curr_category)
         curr_row = data[index]
         curr_person = reverse_dict[repr(curr_row)]
-        final_dict[person] = (curr_row).append(curr_category)
-    with open('with_cat_reg_season_avg.json', 'w') as fp:
+        (curr_row).append(curr_category)
+        curr_row = [float(i) for i in curr_row]
+        final_dict[curr_person] = curr_row
+    with open('datasets/with_cat_reg_season_avg.json', 'w') as fp:
         json.dump(final_dict, fp)
+
+def creating_final_cat_Dicts():
+    json_object = json.load(open("datasets/with_cat_reg_season_avg.json"))
+    keys = [0,1,2,3,4,5,6,7,8,9]
+    cat_dict = {key: [] for key in keys}
+    for person in json_object:
+        curr_person_data = json_object[person]
+        curr_category = (curr_person_data[-1])
+        curr_lst = cat_dict[curr_category]
+        curr_lst.append(person)
+        cat_dict[curr_category] = curr_lst
+    print(cat_dict[9])
+
+    with open('datasets/regseasonavg_clusteringdict', 'w') as fp:
+        json.dump(cat_dict, fp)
+
+json_object = json.load(open("datasets/post80salldata.json"))
+per_game_dict = {}
+for person in json_object:
+    person_stuff = json_object[person]
+    per_game_data = person_stuff["all_advanced"]
+    values = per_game_data[1:]
+    data_change_lst = [7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    for year_data in values:
+        games = year_data[5]
+        for column in data_change_lst:
+            if year_data[column] != "N/A":
+                year_data[column] = float(year_data[column]) * float(games)
+    career_per_game = [0] * len(per_game_data[1])
+    go_through_stats = per_game_data[1:]
+    divisors = [0] * len(per_game_data[1])
+    for index in range(len(go_through_stats)):
+        for index1 in range(len(go_through_stats[0])):
+            if index1 > 4:
+                if (go_through_stats[index][index1]) != "N/A":
+                    career_per_game[index1] += float(go_through_stats[index][index1])
+                    divisors[index1] += float(go_through_stats[index][5])
+    for index in range(len(career_per_game)):
+        if index > 6:
+            if divisors[index] != 0:
+                career_per_game[index] = career_per_game[index]/divisors[index]
+    per_game_dict[person] = [per_game_data[0]] + [career_per_game]
+with open('datasets/reg_season_advanced.json', 'w') as fp:
+    json.dump(per_game_dict, fp)
+
+json_object = json.load(open("datasets/reg_season_advanced.json"))
+print(json_object["LeBron James"])
