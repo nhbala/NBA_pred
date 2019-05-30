@@ -9,10 +9,24 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
 from sklearn.mixture import GaussianMixture
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import TruncatedSVD
 from kneed import DataGenerator, KneeLocator
-
+import numpy as np
+from scipy.sparse import csr_matrix
 
 PER_GAME_REG_OPTIMAL_K = 6
+
+
+def select_n_components(var_ratio, goal_var: float) -> int:
+    total_variance = 0.0
+    n_components = 0
+    for explained_variance in var_ratio:
+        total_variance += explained_variance
+        n_components += 1
+        if total_variance >= goal_var:
+            break
+    return n_components
 
 def create_final_dict():
     final_dict = {}
@@ -477,6 +491,76 @@ def final_run():
     with open('datasets/final_data_playoffs.json', 'w') as fp:
         json.dump(cat_dict, fp)
 
+def final_run_SVD():
+    json_object = json.load(open("datasets/reg_season_advanced.json"))
+    json_object1 = json.load(open("datasets/reg_season_per_game.json"))
+    json_object_height = json.load(open("datasets/data.json"))
+    weights = [0.03225806451] * 31
+    data = []
+    reverse_dict = {}
+    for person in json_object:
+        values = json_object[person]
+        values1 = json_object1[person]
+        values_to_add = (values1[1])[5:]
+        if (values_to_add[2]) > 10:
+            gp = values_to_add[0]
+            gs = values_to_add[1]
+            start_rate = gs/gp
+            values_to_add[0] = 1 - start_rate
+            values_to_add[1] = start_rate
+            values_to_add1 = (values[1])[7:]
+            new_lst = [values_to_add[0], values_to_add[2], values_to_add[6], values_to_add[7],values_to_add[13], values_to_add[14], values_to_add[18], values_to_add[20], values_to_add[21], values_to_add[22], values_to_add[23], values_to_add[24]]
+            final_values = values_to_add1 + new_lst
+            first = (json_object_height[person])
+            json_acceptable_string = first.replace("'", "\"")
+            d = json.loads(json_acceptable_string)
+            curr_height = d['height']
+            height_array = curr_height.split('-')
+            final_height_inch = (int(height_array[0]) * 12) + int(height_array[1])
+            final_values.append(final_height_inch)
+            data.append(final_values)
+            reverse_dict[repr(final_values)] = person
+    svd = TruncatedSVD(n_components=8, random_state=512)
+    svd.fit(data)
+    result = svd.transform(data)
+    gmm = GaussianMixture(n_components=12, n_init=20, covariance_type='full', random_state=4872)
+    gm = gmm.fit(result)
+    labels = gmm.fit_predict(result)
+    final_dict = {}
+    for index in range(len(labels)):
+        curr_category = labels[index]
+        curr_row = data[index]
+        curr_person = reverse_dict[repr(curr_row)]
+        (curr_row).append(curr_category)
+        curr_row = [float(i) for i in curr_row]
+        final_dict[curr_person] = curr_row
+    with open('datasets/with_cat_playoffs_advanced.json', 'w') as fp:
+        json.dump(final_dict, fp)
+
+    json_object = json.load(open("datasets/with_cat_playoffs_advanced.json"))
+    keys = [0,1,2,3,4,5,6,7,8,9,10,11]
+    cat_dict = {key: [] for key in keys}
+    for person in json_object:
+        curr_person_data = json_object[person]
+        curr_category = (curr_person_data[-1])
+        curr_lst = cat_dict[curr_category]
+        curr_lst.append(person)
+        cat_dict[curr_category] = curr_lst
+
+    with open('datasets/final_data_reg_season_reduced_dimensions.json', 'w') as fp:
+        json.dump(cat_dict, fp)
+
+
+def figure_out_svd_k_optimal():
+    json_object = json.load(open("datasets/forsvdmatrix.json"))
+    X = np.array(json_object)
+    X_sparse = csr_matrix(X)
+    tsvd = TruncatedSVD(n_components=X_sparse.shape[1]-1)
+    X_tsvd = tsvd.fit(X)
+    tsvd_var_ratios = tsvd.explained_variance_ratio_
+    print(select_n_components(tsvd_var_ratios, 0.95))
+
+
 def printcat():
     json_object = json.load(open("datasets/final_data.json"))
     for num in json_object:
@@ -490,5 +574,4 @@ def printcat_playoffs():
         print("\n")
 
 if __name__ == "__main__":
-    final_run()
-    printcat_playoffs()
+    printcat()
