@@ -354,6 +354,7 @@ def random_Crap():
 json_object = json.load(open("datasets/reg_season_advanced.json"))
 json_object1 = json.load(open("datasets/reg_season_per_game.json"))
 json_object_height = json.load(open("datasets/data.json"))
+weights = [0.03225806451] * 31
 data = []
 reverse_dict = {}
 for person in json_object:
@@ -367,7 +368,7 @@ for person in json_object:
         values_to_add[0] = 1 - start_rate
         values_to_add[1] = start_rate
         values_to_add1 = (values[1])[7:]
-        new_lst = [values_to_add[0], values_to_add[2], values_to_add[4], values_to_add[7], values_to_add[18], values_to_add[20], values_to_add[21], values_to_add[22], values_to_add[23], values_to_add[24]]
+        new_lst = [values_to_add[0], values_to_add[2], values_to_add[6], values_to_add[7],values_to_add[13], values_to_add[14], values_to_add[18], values_to_add[20], values_to_add[21], values_to_add[22], values_to_add[23], values_to_add[24]]
         # final_values = values_to_add + values_to_add1
         final_values = values_to_add1 + new_lst
         first = (json_object_height[person])
@@ -379,7 +380,7 @@ for person in json_object:
         final_values.append(final_height_inch)
         data.append(final_values)
         reverse_dict[repr(final_values)] = person
-gmm = GaussianMixture(n_components=18, n_init=20, covariance_type='full', random_state=4872)
+gmm = GaussianMixture(n_components=12, n_init=20, covariance_type='full', random_state=4872)
 gm = gmm.fit(data)
 labels = gmm.fit_predict(data)
 final_dict = {}
@@ -394,7 +395,7 @@ with open('datasets/with_cat_reg_season_advanced.json', 'w') as fp:
     json.dump(final_dict, fp)
 
 json_object = json.load(open("datasets/with_cat_reg_season_advanced.json"))
-keys = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+keys = [0,1,2,3,4,5,6,7,8,9,10,11]
 cat_dict = {key: [] for key in keys}
 for person in json_object:
     curr_person_data = json_object[person]
