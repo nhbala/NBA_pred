@@ -206,6 +206,45 @@ def find_per_game_avg():
     with open('datasets/reg_season_per_game.json', 'w') as fp:
         json.dump(per_game_dict, fp)
 
+def find_per_game_avg_playoffs():
+    json_object = json.load(open("datasets/post80salldata.json"))
+    per_game_dict = {}
+    for person in json_object:
+        person_stuff = json_object[person]
+        if "all_playoffs_per_game" in person_stuff:
+            per_game_data = person_stuff["all_playoffs_per_game"]
+            values = per_game_data[1:]
+            data_change_lst = [7,8,9,11,12,14,15,18,19,21,22,23,24,25,26,27,28,29]
+            for year_data in values:
+                games = year_data[5]
+                for column in data_change_lst:
+                    if year_data[column] != "N/A":
+                        year_data[column] = float(year_data[column]) * float(games)
+            career_per_game = [0] * len(per_game_data[1])
+            go_through_stats = per_game_data[1:]
+            divisors = [0] * len(per_game_data[1])
+            for index in range(len(go_through_stats)):
+                for index1 in range(len(go_through_stats[0])):
+                    if index1 > 4:
+                        if (go_through_stats[index][index1]) != "N/A":
+                            career_per_game[index1] += float(go_through_stats[index][index1])
+                            divisors[index1] += float(go_through_stats[index][5])
+            for index in range(len(career_per_game)):
+                if index > 6:
+                    if divisors[index] != 0:
+                        career_per_game[index] = career_per_game[index]/divisors[index]
+            if career_per_game[9] != 0:
+                career_per_game[10] = (career_per_game[8])/(career_per_game[9])
+            if career_per_game[12] != 0:
+                career_per_game[13] = (career_per_game[11])/(career_per_game[12])
+            if career_per_game[15] != 0:
+                career_per_game[16] = (career_per_game[14])/(career_per_game[15])
+            if career_per_game[9] != 0:
+                career_per_game[21] = (career_per_game[8] + 0.5 * career_per_game[11])/career_per_game[9]
+            per_game_dict[person] = [per_game_data[0]] + [career_per_game]
+    with open('datasets/playoffs_per_game.json', 'w') as fp:
+        json.dump(per_game_dict, fp)
+
 def find_optimal_k():
     json_object = json.load(open("reg_season_per_game.json"))
     json_object_height = json.load(open("data.json"))
@@ -320,6 +359,37 @@ def find_advanced_avg():
     with open('datasets/reg_season_advanced.json', 'w') as fp:
         json.dump(per_game_dict, fp)
 
+def find_advanced_avg_playoffs():
+    json_object = json.load(open("datasets/post80salldata.json"))
+    per_game_dict = {}
+    for person in json_object:
+        person_stuff = json_object[person]
+        if "all_playoffs_advanced" in person_stuff:
+            per_game_data = person_stuff["all_playoffs_advanced"]
+            values = per_game_data[1:]
+            data_change_lst = [7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+            for year_data in values:
+                games = year_data[5]
+                for column in data_change_lst:
+                    if year_data[column] != "N/A":
+                        year_data[column] = float(year_data[column]) * float(games)
+            career_per_game = [0] * len(per_game_data[1])
+            go_through_stats = per_game_data[1:]
+            divisors = [0] * len(per_game_data[1])
+            for index in range(len(go_through_stats)):
+                for index1 in range(len(go_through_stats[0])):
+                    if index1 > 4:
+                        if (go_through_stats[index][index1]) != "N/A":
+                            career_per_game[index1] += float(go_through_stats[index][index1])
+                            divisors[index1] += float(go_through_stats[index][5])
+            for index in range(len(career_per_game)):
+                if index > 6:
+                    if divisors[index] != 0:
+                        career_per_game[index] = career_per_game[index]/divisors[index]
+            per_game_dict[person] = [per_game_data[0]] + [career_per_game]
+    with open('datasets/playoffs_advanced.json', 'w') as fp:
+        json.dump(per_game_dict, fp)
+
 def random_Crap():
     json_object = json.load(open("datasets/reg_season_advanced.json"))
     json_object_height = json.load(open("datasets/data.json"))
@@ -350,64 +420,75 @@ def random_Crap():
     kneedle = KneeLocator(K, Sum_of_squared_distances, S=1.0, curve='convex', direction='decreasing')
     print(round(kneedle.knee, 3))
 
-# def final_run():
-json_object = json.load(open("datasets/reg_season_advanced.json"))
-json_object1 = json.load(open("datasets/reg_season_per_game.json"))
-json_object_height = json.load(open("datasets/data.json"))
-weights = [0.03225806451] * 31
-data = []
-reverse_dict = {}
-for person in json_object:
-    values = json_object[person]
-    values1 = json_object1[person]
-    values_to_add = (values1[1])[5:]
-    if (values_to_add[2]) > 10:
-        gp = values_to_add[0]
-        gs = values_to_add[1]
-        start_rate = gs/gp
-        values_to_add[0] = 1 - start_rate
-        values_to_add[1] = start_rate
-        values_to_add1 = (values[1])[7:]
-        new_lst = [values_to_add[0], values_to_add[2], values_to_add[6], values_to_add[7],values_to_add[13], values_to_add[14], values_to_add[18], values_to_add[20], values_to_add[21], values_to_add[22], values_to_add[23], values_to_add[24]]
-        # final_values = values_to_add + values_to_add1
-        final_values = values_to_add1 + new_lst
-        first = (json_object_height[person])
-        json_acceptable_string = first.replace("'", "\"")
-        d = json.loads(json_acceptable_string)
-        curr_height = d['height']
-        height_array = curr_height.split('-')
-        final_height_inch = (int(height_array[0]) * 12) + int(height_array[1])
-        final_values.append(final_height_inch)
-        data.append(final_values)
-        reverse_dict[repr(final_values)] = person
-gmm = GaussianMixture(n_components=12, n_init=20, covariance_type='full', random_state=4872)
-gm = gmm.fit(data)
-labels = gmm.fit_predict(data)
-final_dict = {}
-for index in range(len(labels)):
-    curr_category = labels[index]
-    curr_row = data[index]
-    curr_person = reverse_dict[repr(curr_row)]
-    (curr_row).append(curr_category)
-    curr_row = [float(i) for i in curr_row]
-    final_dict[curr_person] = curr_row
-with open('datasets/with_cat_reg_season_advanced.json', 'w') as fp:
-    json.dump(final_dict, fp)
+def final_run():
+    json_object = json.load(open("datasets/playoffs_advanced.json"))
+    json_object1 = json.load(open("datasets/playoffs_per_game.json"))
+    json_object_height = json.load(open("datasets/data.json"))
+    weights = [0.03225806451] * 31
+    data = []
+    reverse_dict = {}
+    for person in json_object:
+        values = json_object[person]
+        values1 = json_object1[person]
+        values_to_add = (values1[1])[5:]
+        if (values_to_add[2]) > 10:
+            gp = values_to_add[0]
+            gs = values_to_add[1]
+            start_rate = gs/gp
+            values_to_add[0] = 1 - start_rate
+            values_to_add[1] = start_rate
+            values_to_add1 = (values[1])[7:]
+            new_lst = [values_to_add[0], values_to_add[2], values_to_add[6], values_to_add[7],values_to_add[13], values_to_add[14], values_to_add[18], values_to_add[20], values_to_add[21], values_to_add[22], values_to_add[23], values_to_add[24]]
+            # final_values = values_to_add + values_to_add1
+            final_values = values_to_add1 + new_lst
+            first = (json_object_height[person])
+            json_acceptable_string = first.replace("'", "\"")
+            d = json.loads(json_acceptable_string)
+            curr_height = d['height']
+            height_array = curr_height.split('-')
+            final_height_inch = (int(height_array[0]) * 12) + int(height_array[1])
+            final_values.append(final_height_inch)
+            data.append(final_values)
+            reverse_dict[repr(final_values)] = person
+    gmm = GaussianMixture(n_components=12, n_init=20, covariance_type='full', random_state=4872)
+    gm = gmm.fit(data)
+    labels = gmm.fit_predict(data)
+    final_dict = {}
+    for index in range(len(labels)):
+        curr_category = labels[index]
+        curr_row = data[index]
+        curr_person = reverse_dict[repr(curr_row)]
+        (curr_row).append(curr_category)
+        curr_row = [float(i) for i in curr_row]
+        final_dict[curr_person] = curr_row
+    with open('datasets/with_cat_playoffs_advanced.json', 'w') as fp:
+        json.dump(final_dict, fp)
 
-json_object = json.load(open("datasets/with_cat_reg_season_advanced.json"))
-keys = [0,1,2,3,4,5,6,7,8,9,10,11]
-cat_dict = {key: [] for key in keys}
-for person in json_object:
-    curr_person_data = json_object[person]
-    curr_category = (curr_person_data[-1])
-    curr_lst = cat_dict[curr_category]
-    curr_lst.append(person)
-    cat_dict[curr_category] = curr_lst
+    json_object = json.load(open("datasets/with_cat_playoffs_advanced.json"))
+    keys = [0,1,2,3,4,5,6,7,8,9,10,11]
+    cat_dict = {key: [] for key in keys}
+    for person in json_object:
+        curr_person_data = json_object[person]
+        curr_category = (curr_person_data[-1])
+        curr_lst = cat_dict[curr_category]
+        curr_lst.append(person)
+        cat_dict[curr_category] = curr_lst
 
-with open('datasets/final_data.json', 'w') as fp:
-    json.dump(cat_dict, fp)
+    with open('datasets/final_data_playoffs.json', 'w') as fp:
+        json.dump(cat_dict, fp)
 
-json_object = json.load(open("datasets/final_data.json"))
-for num in json_object:
-    print(json_object[num])
-    print("\n")
+def printcat():
+    json_object = json.load(open("datasets/final_data.json"))
+    for num in json_object:
+        print(json_object[num])
+        print("\n")
+
+def printcat_playoffs():
+    json_object = json.load(open("datasets/final_data_playoffs.json"))
+    for num in json_object:
+        print(json_object[num])
+        print("\n")
+
+if __name__ == "__main__":
+    final_run()
+    printcat_playoffs()
