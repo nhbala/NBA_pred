@@ -7,6 +7,7 @@ from player import Player, getSoupFromURL
 from time import sleep
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
+from sklearn.mixture import GaussianMixture
 import matplotlib.pyplot as plt
 from kneed import DataGenerator, KneeLocator
 
@@ -349,23 +350,26 @@ def random_Crap():
     kneedle = KneeLocator(K, Sum_of_squared_distances, S=1.0, curve='convex', direction='decreasing')
     print(round(kneedle.knee, 3))
 
-def final_run():
-    json_object = json.load(open("datasets/reg_season_advanced.json"))
-    json_object1 = json.load(open("datasets/reg_season_per_game.json"))
-    json_object_height = json.load(open("datasets/data.json"))
-    data = []
-    reverse_dict = {}
-    for person in json_object:
-        values = json_object[person]
-        values1 = json_object1[person]
-        values_to_add = (values1[1])[5:]
+# def final_run():
+json_object = json.load(open("datasets/reg_season_advanced.json"))
+json_object1 = json.load(open("datasets/reg_season_per_game.json"))
+json_object_height = json.load(open("datasets/data.json"))
+data = []
+reverse_dict = {}
+for person in json_object:
+    values = json_object[person]
+    values1 = json_object1[person]
+    values_to_add = (values1[1])[5:]
+    if (values_to_add[2]) > 10:
         gp = values_to_add[0]
         gs = values_to_add[1]
         start_rate = gs/gp
         values_to_add[0] = 1 - start_rate
         values_to_add[1] = start_rate
         values_to_add1 = (values[1])[7:]
-        final_values = values_to_add + values_to_add1
+        new_lst = [values_to_add[0], values_to_add[2], values_to_add[4], values_to_add[7], values_to_add[18], values_to_add[20], values_to_add[21], values_to_add[22], values_to_add[23], values_to_add[24]]
+        # final_values = values_to_add + values_to_add1
+        final_values = values_to_add1 + new_lst
         first = (json_object_height[person])
         json_acceptable_string = first.replace("'", "\"")
         d = json.loads(json_acceptable_string)
@@ -375,32 +379,34 @@ def final_run():
         final_values.append(final_height_inch)
         data.append(final_values)
         reverse_dict[repr(final_values)] = person
-    km = KMeans(n_clusters=16, init='k-means++',
-                max_iter=100, n_init=10, verbose=0, random_state=34)
-    km = km.fit(data)
-    final_dict = {}
-    for index in range(len(km.labels_)):
-        curr_category = km.labels_[index]
-        curr_row = data[index]
-        curr_person = reverse_dict[repr(curr_row)]
-        (curr_row).append(curr_category)
-        curr_row = [float(i) for i in curr_row]
-        final_dict[curr_person] = curr_row
-    with open('datasets/with_cat_reg_season_advanced.json', 'w') as fp:
-        json.dump(final_dict, fp)
+gmm = GaussianMixture(n_components=18, n_init=20, covariance_type='full', random_state=4872)
+gm = gmm.fit(data)
+labels = gmm.fit_predict(data)
+final_dict = {}
+for index in range(len(labels)):
+    curr_category = labels[index]
+    curr_row = data[index]
+    curr_person = reverse_dict[repr(curr_row)]
+    (curr_row).append(curr_category)
+    curr_row = [float(i) for i in curr_row]
+    final_dict[curr_person] = curr_row
+with open('datasets/with_cat_reg_season_advanced.json', 'w') as fp:
+    json.dump(final_dict, fp)
 
-    json_object = json.load(open("datasets/with_cat_reg_season_advanced.json"))
-    keys = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-    cat_dict = {key: [] for key in keys}
-    for person in json_object:
-        curr_person_data = json_object[person]
-        curr_category = (curr_person_data[-1])
-        curr_lst = cat_dict[curr_category]
-        curr_lst.append(person)
-        cat_dict[curr_category] = curr_lst
+json_object = json.load(open("datasets/with_cat_reg_season_advanced.json"))
+keys = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+cat_dict = {key: [] for key in keys}
+for person in json_object:
+    curr_person_data = json_object[person]
+    curr_category = (curr_person_data[-1])
+    curr_lst = cat_dict[curr_category]
+    curr_lst.append(person)
+    cat_dict[curr_category] = curr_lst
 
-    with open('datasets/final_data.json', 'w') as fp:
-        json.dump(cat_dict, fp)
+with open('datasets/final_data.json', 'w') as fp:
+    json.dump(cat_dict, fp)
 
-# json_object = json.load(open("datasets/reg_season_advanced.json"))
-# print(json_object["LeBron James"])
+json_object = json.load(open("datasets/final_data.json"))
+for num in json_object:
+    print(json_object[num])
+    print("\n")
